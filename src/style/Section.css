@@ -1,0 +1,46 @@
+.hero {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Montserrat; }
+  .hero .content {
+    width: 514px; }
+    .hero .content h3 {
+      font-size: 20px; }
+    .hero .content h1 {
+      font-size: 50px;
+      font-weight: 600; }
+    .hero .content p {
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.64px; }
+  .hero .imageBox {
+    width: 500px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 50px;
+    background-color: #FFF;
+    position: relative; }
+    .hero .imageBox img {
+      width: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: -10px; }
+
+@media (max-width: 480px) {
+  .hero {
+    flex-direction: column-reverse; }
+    .hero .imageBox {
+      width: 310px;
+      height: 230px; }
+    .hero .content {
+      margin-top: 30px;
+      width: 90%;
+      text-align: center; }
+      .hero .content h3 {
+        font-size: 14px; }
+      .hero .content h1 {
+        font-size: 35px; }
+      .hero .content p {
+        line-height: 24px; } }

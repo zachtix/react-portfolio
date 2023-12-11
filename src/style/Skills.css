@@ -1,0 +1,23 @@
+.skills {
+  margin-top: 130px;
+  font-family: Montserrat; }
+  .skills .cards {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 120px; }
+    .skills .cards .card {
+      text-align: center;
+      text-transform: uppercase; }
+      .skills .cards .card img {
+        width: 120px;
+        height: 120px; }
+
+@media (max-width: 480px) {
+  .skills .cards {
+    column-gap: 20px;
+    row-gap: 60px; }
+    .skills .cards .card img {
+      width: 80px;
+      height: 80px; } }
