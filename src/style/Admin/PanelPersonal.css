@@ -1,0 +1,44 @@
+.formEdit {
+  display: flex;
+  flex-direction: column;
+  gap: 24px; }
+  .formEdit .firstForm, .formEdit .secondForm, .formEdit .thirdForm, .formEdit .fourForm {
+    display: flex;
+    gap: 20px; }
+    .formEdit .firstForm input, .formEdit .secondForm input, .formEdit .thirdForm input, .formEdit .fourForm input {
+      width: 400px;
+      font-family: Montserrat;
+      border: 0;
+      background-color: #EAF0F7;
+      padding: 12px;
+      border-radius: 10px;
+      font-family: Montserrat;
+      font-weight: 600; }
+      .formEdit .firstForm input:focus, .formEdit .secondForm input:focus, .formEdit .thirdForm input:focus, .formEdit .fourForm input:focus {
+        outline: none; }
+    .formEdit .firstForm .inputBox, .formEdit .secondForm .inputBox, .formEdit .thirdForm .inputBox, .formEdit .fourForm .inputBox {
+      display: flex;
+      flex-direction: column; }
+  .formEdit .fourForm .imgInput {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px; }
+    .formEdit .fourForm .imgInput img {
+      width: 300px;
+      height: 200px;
+      object-fit: contain;
+      background-color: #EAF0F7;
+      border-radius: 12px;
+      overflow: hidden; }
+  .formEdit button {
+    width: 400px;
+    background-color: #4461F2;
+    border: 0;
+    color: #FFF;
+    font-weight: 600;
+    padding: 12px 0;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: Montserrat; }

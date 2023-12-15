@@ -1,0 +1,65 @@
+.panelPage {
+  background-color: #FFF;
+  height: 100vh;
+  color: #000;
+  display: flex; }
+  .panelPage .leftNavbar {
+    width: 300px;
+    height: 100%;
+    border-right: 1px solid #E4E4E4; }
+    .panelPage .leftNavbar .header {
+      padding: 0 18px;
+      font-family: Montserrat;
+      height: 90px;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #E4E4E4; }
+    .panelPage .leftNavbar .navList {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 90%;
+      padding: 18px 18px; }
+      .panelPage .leftNavbar .navList button {
+        width: 255px;
+        height: 63px;
+        border: 0;
+        border-radius: 12px;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        font-family: Montserrat;
+        color: #6A6A6A;
+        font-weight: 600;
+        cursor: pointer; }
+        .panelPage .leftNavbar .navList button.navSelect {
+          background-color: #ECF1FF;
+          color: #2C62EE; }
+        .panelPage .leftNavbar .navList button:hover {
+          background-color: #ECF1FF;
+          color: #2C62EE; }
+        .panelPage .leftNavbar .navList button i {
+          font-size: 20px;
+          width: 20px;
+          margin-right: 16px; }
+        .panelPage .leftNavbar .navList button.nav-logout {
+          background-color: #FFEFEF;
+          color: #F93333;
+          display: flex;
+          justify-content: center; }
+  .panelPage .rightPanel {
+    width: 100%; }
+    .panelPage .rightPanel .header {
+      padding: 0 18px;
+      display: flex;
+      align-items: center;
+      color: #6A6A6A;
+      height: 90px;
+      border-bottom: 1px solid #E4E4E4;
+      background-color: #2C62EE;
+      color: #FFF; }
+    .panelPage .rightPanel .panelBox {
+      padding: 0 18px;
+      height: 90%;
+      overflow: auto; }

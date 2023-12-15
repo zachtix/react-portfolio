@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import '../style/ProjectsBlogs.css'
+import '../../style/Projects/ProjectsBlogs.css'
 import axios, { Axios } from 'axios';
 // import useAxios from '../services/useAxios'
 import { Link } from 'react-router-dom';

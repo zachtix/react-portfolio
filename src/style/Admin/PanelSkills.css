@@ -1,0 +1,36 @@
+.boxSkills {
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; }
+  .boxSkills .boxSkill {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .boxSkills .boxSkill:not(:first-child) {
+      border-top: 1px solid grey; }
+    .boxSkills .boxSkill .detail {
+      width: 300px;
+      display: flex;
+      justify-content: space-between; }
+      .boxSkills .boxSkill .detail img {
+        height: 32px; }
+    .boxSkills .boxSkill .btn-group {
+      margin-left: 50px;
+      display: flex;
+      gap: 20px; }
+      .boxSkills .boxSkill .btn-group button {
+        padding: 6px 12px;
+        border: 0;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: Montserrat;
+        color: #FFF; }
+      .boxSkills .boxSkill .btn-group .btn-edit {
+        background-color: #FFF9E9;
+        color: #F4BA24;
+        cursor: not-allowed; }
+      .boxSkills .boxSkill .btn-group .btn-delete {
+        background-color: #FFEFEF;
+        color: #F93333; }

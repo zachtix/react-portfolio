@@ -1,0 +1,10 @@
+.tableLog {
+  border-collapse: collapse;
+  border: 1px solid #E4E4E4;
+  border-radius: 1em; }
+  .tableLog th, .tableLog td {
+    border: 1px solid #E4E4E4;
+    width: 200px;
+    padding: 10px 12px; }
+  .tableLog tr:nth-child(odd) {
+    background-color: #F1F1F1; }

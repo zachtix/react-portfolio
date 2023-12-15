@@ -1,0 +1,80 @@
+.bg-login {
+  background-color: #4461F2;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .bg-login .warpper {
+    background-color: #F6F6F6;
+    width: 1200px;
+    height: 700px;
+    border-radius: 40px; }
+    .bg-login .warpper .menu {
+      display: flex;
+      justify-content: end;
+      gap: 32px;
+      margin: 50px 100px; }
+      .bg-login .warpper .menu .btn {
+        border: 0;
+        color: #4461F2;
+        font-weight: 600;
+        padding: 12px 24px;
+        border-radius: 24px;
+        cursor: pointer;
+        font-family: Montserrat; }
+        .bg-login .warpper .menu .btn.btn-sign-in {
+          background-color: transparent;
+          position: relative; }
+          .bg-login .warpper .menu .btn.btn-sign-in::before {
+            content: '';
+            background-color: #4461F2;
+            position: absolute;
+            bottom: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 4px;
+            border-radius: 4px; }
+        .bg-login .warpper .menu .btn.btn-sign-up {
+          background-color: white; }
+    .bg-login .warpper .content {
+      margin: 0 100px;
+      margin-top: 100px;
+      display: flex;
+      justify-content: space-between; }
+      .bg-login .warpper .content .left-content {
+        width: 250px;
+        position: relative; }
+        .bg-login .warpper .content .left-content h1 {
+          font-family: Montserrat;
+          font-weight: 600;
+          color: #000; }
+        .bg-login .warpper .content .left-content img {
+          position: absolute;
+          top: 0;
+          left: 200px;
+          width: 400px; }
+      .bg-login .warpper .content .right-content {
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px; }
+        .bg-login .warpper .content .right-content input {
+          width: 325px;
+          border: 0;
+          background-color: #EAF0F7;
+          padding: 12px;
+          border-radius: 10px;
+          font-family: Montserrat; }
+          .bg-login .warpper .content .right-content input:focus {
+            outline: none; }
+        .bg-login .warpper .content .right-content button {
+          margin-top: 30px;
+          background-color: #4461F2;
+          border: 0;
+          color: #FFF;
+          font-weight: 600;
+          padding: 12px 0;
+          border-radius: 10px;
+          cursor: pointer;
+          font-family: Montserrat; }

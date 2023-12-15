@@ -1,0 +1,13 @@
+.tableLog {
+  border-collapse: collapse;
+  border: 1px solid #E4E4E4;
+  border-radius: 1em;
+  & th, td {
+    border: 1px solid #E4E4E4;
+    width: 200px;
+    padding: 10px 12px;
+  }
+  & tr:nth-child(odd) {
+    background-color: #F1F1F1;
+  }
+}

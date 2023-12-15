@@ -1,13 +1,13 @@
-import '../style/About.css'
+import '../../style/Home/About.css'
 
 function About(props) {
-  const { data } = props;
+  const { personaldata } = props;
   return(
     <>
     <div className="warpper">
       <div className="about-me">
         <h3>About me</h3>
-        <p>{data.personalRecord}</p>
+        <p>{personaldata.personalRecord}</p>
       </div>
     </div>
     </>

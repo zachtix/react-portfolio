@@ -1,16 +1,7 @@
-import { useState, useEffect } from 'react';
-import axios, { Axios } from 'axios';
-import '../style/Skills.css'
+import '../../style/Home/Skills.css'
 
-function Skills() {
-  const { VITE_API_ENDPOINT } = import.meta.env
-  const [ skills, setSkills ] = useState([]);
-  useEffect(() => {
-    axios.get(VITE_API_ENDPOINT+'/getskills')
-    .then((res) => {
-      setSkills(res.data);
-    });
-  }, []);
+function Skills(props) {
+  const { skills } = props;
   return(
     <>
       <div className="warpper">

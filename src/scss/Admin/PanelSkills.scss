@@ -1,0 +1,49 @@
+.boxSkills {
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  .boxSkill {
+    padding: 16px;
+    &:not(:first-child) {
+      border-top: 1px solid grey;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .detail {
+      width: 300px;
+      display: flex;
+      justify-content: space-between;
+      & img {
+        // width: 32px;
+        height: 32px;
+        // display: flex;
+        // justify-content: center;
+      }
+    }
+    .btn-group {
+      margin-left: 50px;
+      display: flex;
+      gap: 20px;
+      & button {
+        padding: 6px 12px;
+        border: 0;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: Montserrat;
+        color: #FFF;
+        // box-shadow: 3px 3px 5px 0px black;
+      }
+      .btn-edit {
+        background-color: #FFF9E9;
+        color: #F4BA24;
+        cursor: not-allowed;
+      }
+      .btn-delete {
+        background-color: #FFEFEF;
+        color: #F93333;
+      }
+    }
+  }
+}

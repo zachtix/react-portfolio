@@ -1,14 +1,12 @@
-// import Navbar from '../components/Navbar'
-import Section from '../components/Section'
-import About from '../components/About'
-import ProjectsHome from '../components/ProjectsHome'
-import Skills from '../components/Skills'
+import Section from '../components/Home/Section'
+import About from '../components/Home/About'
+import ProjectsHome from '../components/Home/ProjectsHome'
+import Skills from '../components/Home/Skills'
 import { useEffect } from 'react';
-import axios, { Axios } from 'axios';
-// import Footer from '../components/Footer'
+import axios from 'axios';
 
 function Home(props) {
-  const { data, projects } = props;
+  const { personaldata, projects, skills } = props;
   useEffect(() => {
     if (localStorage.getItem('owner') !== 'true'){
       axios.get('https://api.ipify.org?format=json')
@@ -31,10 +29,10 @@ function Home(props) {
   });
   return(
     <>
-      <Section data={data}/>
-      <About data={data}/>
+      <Section personaldata={personaldata}/>
+      <About personaldata={personaldata}/>
       <ProjectsHome projects={projects}/>
-      <Skills />
+      <Skills skills={skills} />
     </>
   )
 }
