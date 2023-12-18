@@ -18,7 +18,9 @@ function PanelLog() {
     .then(response => {
         setLogs(response.data)
         setShouldFetchData(false);
-    })
+    }).catch(error=>{
+      alert(error.response.data.msg);
+    });
   }, []);
   return(
     <>
