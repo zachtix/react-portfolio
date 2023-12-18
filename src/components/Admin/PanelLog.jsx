@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import '../../style/Admin/PanelLog.css'
+import '@style/Admin/PanelLog.css'
 
 function PanelLog() {
   const { VITE_API_ENDPOINT } = import.meta.env

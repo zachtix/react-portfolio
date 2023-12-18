@@ -1,6 +1,6 @@
-import '../../style/Home/ProjectsHome.css'
+import '@style/Home/ProjectsHome.css'
 import { Link } from 'react-router-dom';
-import ProjectItem from '../Projects/ProjectItem'
+import ProjectItem from '@components/Projects/ProjectItem'
 
 function ProjectsHome(props) {
   const { projects } = props;

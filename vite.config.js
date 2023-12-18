@@ -12,5 +12,14 @@ export default defineConfig({
   plugins: [react()],
   server: {
     host: '192.168.1.100'
+  },
+  resolve: {
+    alias: {
+      '@': '/src',
+      '@components': '/src/components',
+      '@pages': '/src/pages',
+      '@style': '/src/style',
+      '@services': '/src/services'
+    },
   }
 })

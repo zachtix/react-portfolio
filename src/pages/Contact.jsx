@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import '../style/Contact/Contact.css'
+import '@style/Contact/Contact.css'
 import axios, { Axios } from 'axios';
 
 function Contact(props) {

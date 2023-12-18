@@ -21,6 +21,14 @@
         // display: flex;
         // justify-content: center;
       }
+      & p {
+        display: flex;
+        align-items: center;
+        & i {
+          margin-right: 10px;
+          font-size: 8px;
+        }
+      }
     }
     .btn-group {
       margin-left: 50px;

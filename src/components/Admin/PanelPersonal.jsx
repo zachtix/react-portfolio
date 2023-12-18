@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import '../../style/Admin/PanelPersonal.css'
+import '@style/Admin/PanelPersonal.css'
 
 function PanelPersonal() {
   const { VITE_API_ENDPOINT } = import.meta.env

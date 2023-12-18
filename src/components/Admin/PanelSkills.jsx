@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import '../../style/Admin/PanelSkills.css'
+import '@style/Admin/PanelSkills.css'
 
 function PanelSkills() {
   const { VITE_API_ENDPOINT } = import.meta.env
@@ -34,7 +34,10 @@ function PanelSkills() {
       {skillsData.map((e)=>(
         <div className='boxSkill'>
           <div className="detail">
-            <p>{e.skill}</p>
+            <p>
+              {e.onShow? <i class="fa-solid fa-circle" style={{color: "lightgreen"}}></i>:<i class="fa-solid fa-circle" style={{color: "red"}}></i>}
+              {e.skill}
+            </p>
             <img src={e.iconUrl} alt="" />
           </div>
           {/* <p>{e.onShow}</p> */}

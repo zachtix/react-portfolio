@@ -13,6 +13,12 @@
       width: 500px;
       display: flex;
       justify-content: space-between; }
+      .boxProjects .boxProject .detail p {
+        display: flex;
+        align-items: center; }
+        .boxProjects .boxProject .detail p i {
+          margin-right: 10px;
+          font-size: 8px; }
       .boxProjects .boxProject .detail img {
         width: 100px;
         height: 60px;
@@ -33,8 +39,7 @@
         color: #FFF; }
       .boxProjects .boxProject .btn-group .btn-edit {
         background-color: #FFF9E9;
-        color: #F4BA24;
-        cursor: not-allowed; }
+        color: #F4BA24; }
       .boxProjects .boxProject .btn-group .btn-delete {
         background-color: #FFEFEF;
         color: #F93333; }

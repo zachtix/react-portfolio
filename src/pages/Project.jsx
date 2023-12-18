@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import '../style/Project/Project.css'
+import '@style/Project/Project.css'
 import axios, { Axios } from 'axios';
 
 function Project(props) {

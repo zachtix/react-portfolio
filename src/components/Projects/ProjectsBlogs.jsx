@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
-import '../../style/Projects/ProjectsBlogs.css'
+import '@style/Projects/ProjectsBlogs.css'
 import axios, { Axios } from 'axios';
-// import useAxios from '../services/useAxios'
+// import useAxios from '@services/useAxios'
 import { Link } from 'react-router-dom';
-import ProjectItem from './ProjectItem'
+import ProjectItem from '@components/Projects/ProjectItem'
 
 function ProjectsBlogs(props) {
   const { projects } = props;

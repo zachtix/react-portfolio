@@ -1,14 +1,14 @@
 import { useState, useEffect  } from 'react'
 import { HashRouter, Routes, Route, Link } from "react-router-dom";
-import Home from './pages/Home'
-import Projects from './pages/Projects'
-import Contact from './pages/Contact'
-import ErrorPage from './pages/404'
-import AdminRoutes from './AdminRoutes'
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
-import Project from './pages/Project'
-// import useAxios from './services/useAxios'
+import Home from '@pages/Home'
+import Projects from '@pages/Projects'
+import Contact from '@pages/Contact'
+import ErrorPage from '@pages/404'
+import AdminRoutes from '@/AdminRoutes'
+import Navbar from '@components/Navbar'
+import Footer from '@components/Footer'
+import Project from '@pages/Project'
+// import useAxios from '@services/useAxios'
 import axios from 'axios';
 
 function App() {

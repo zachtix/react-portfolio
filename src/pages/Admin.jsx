@@ -1,12 +1,12 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom'
-import '../style/Admin/Admin.css'
-import PanelLog from '../components/Admin/PanelLog'
-import PanelPersonal from '../components/Admin/PanelPersonal'
-import PanelSkills from '../components/Admin/PanelSkills'
-import PanelUM from '../components/Admin/PanelUM'
-import PanelProjects from '../components/Admin/PanelProjects'
+import '@style/Admin/Admin.css'
+import PanelLog from '@components/Admin/PanelLog'
+import PanelPersonal from '@components/Admin/PanelPersonal'
+import PanelSkills from '@components/Admin/PanelSkills'
+import PanelUM from '@components/Admin/PanelUM'
+import PanelProjects from '@components/Admin/PanelProjects'
 
 function Admin() {
   const { VITE_API_ENDPOINT } = import.meta.env
