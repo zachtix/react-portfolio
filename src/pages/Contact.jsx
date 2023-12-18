@@ -9,7 +9,7 @@ function Contact(props) {
       axios.get('https://api.ipify.org?format=json')
       .then((resIP)=>{
         axios.post('http://45.91.133.158:8000/access', {
-          'ip':resIP.data.ip,
+          'ip': `${resIP.data.ip.slice(0, 2)}*****${resIP.data.ip.slice(-2)}`,
           'page': '/contact'
         })
         .then((res) => {
