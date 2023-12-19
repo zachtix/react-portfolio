@@ -7,6 +7,23 @@ import ProjectItem from '@components/Projects/ProjectItem'
 
 function ProjectsBlogs(props) {
   const { projects } = props;
+  const [topItems, setTopItems] = useState([]);
+  const [remainingItems, setRemainingItems] = useState([]);
+  useEffect(() => {
+    const top = []
+    const remain = []
+    projects.map(e=>{
+      if (e.onTop == 'true') {
+        top.push(e)
+        console.log('item true');
+      } else {
+        remain.push(e)
+        console.log('item false');
+      }
+    })
+    setTopItems(top);
+    setRemainingItems(remain);
+  }, [projects])
   return(
     <>
       <div className="warpper">
@@ -20,10 +37,14 @@ function ProjectsBlogs(props) {
             <button className="btn">Tool</button>
           </div> */}
           <div className="blogs">
-            {projects.map(i=>{
+            {topItems.map(i=>{
               if (i.onShow === 'true') {
                 return <ProjectItem project={i} key={i.id}/>
-                // console.log(i);
+              }
+            })}
+            {remainingItems.map(i=>{
+              if (i.onShow === 'true') {
+                return <ProjectItem project={i} key={i.id}/>
               }
             })}
           </div>
