@@ -62,10 +62,21 @@
         text-decoration: none;
         color: #FFF;
       }
+      .description {
+        max-width: 100%;
+      }
     }
   }
 }
-
+@media (max-width:800px) {
+ .contents {
+  .imagesContent {
+    & img {
+      max-width: 400px;
+    }
+  }
+ }
+}
 @media (max-width:480px) {
   .projectCard {
     .contents {

@@ -85,7 +85,7 @@ function Project(props) {
               {btnLiveSite}
               {btnGitHub}
               <hr />
-              <p>{project.description}</p>
+              <p className='description'>{project.description}</p>
             </div>
           </div>
         </div>

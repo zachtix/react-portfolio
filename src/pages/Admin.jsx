@@ -10,22 +10,38 @@ import PanelProjects from '@components/Admin/PanelProjects'
 
 function Admin() {
   const { VITE_API_ENDPOINT } = import.meta.env
-  const [toggleFetch, setToggleFetch] = useState(false);
   const navigate = useNavigate();
   const [ selectedButton, setSelectedButton] = useState('personal')
   useEffect(()=>{
     const accessToken = localStorage.getItem('access_token')
     if ( accessToken === null ){
-      // window.location.replace('/admin');
       navigate('/admin/login', { replace: true });
     }
   }, []);
+  const checkAuth = ()=>{
+    const accessToken = localStorage.getItem('access_token')
+    axios.post(VITE_API_ENDPOINT+'/auth', 
+    {
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer '+accessToken
+      }
+    })
+    .then((response) => {
+      console.log(response.data.status);
+    }).catch(error=>{
+      alert(error.response.data.msg);
+      localStorage.removeItem('access_token')
+      navigate('/admin/login', { replace: true });
+    });
+  }
   const logout = ()=>{
     localStorage.removeItem('access_token')
     navigate('/admin/login', { replace: true });
   }
   const changeContent = ()=>{
     if ( selectedButton == 'personal') {
+      // return <>{checkAuth()}<PanelPersonal /></>
       return <PanelPersonal />
     } else if ( selectedButton == 'skills') {
       return <PanelSkills />

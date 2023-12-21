@@ -17,7 +17,13 @@
     }
   }
 }
-
+@media (max-width:800px) {
+  .about-me {
+    & p {
+      width: 90%;
+    }
+  }
+}
 @media (max-width:480px) {
   .about-me {
     & p{

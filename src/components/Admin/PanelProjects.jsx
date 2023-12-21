@@ -56,7 +56,7 @@ function PanelProjects() {
             <div className='boxProject'>
               <div className="detail">
                 <p>
-                  {e.onShow? <i class="fa-solid fa-circle" style={{color: "lightgreen"}}></i>:<i class="fa-solid fa-circle" style={{color: "red"}}></i>}
+                  {e.onShow=='true'? <i class="fa-solid fa-circle" style={{color: "lightgreen"}}></i>:<i class="fa-solid fa-circle" style={{color: "red"}}></i>}
                   {e.title}
                 </p>
                 <img src={e.thumbnailUrl} alt="" />

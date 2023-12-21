@@ -57,7 +57,7 @@ function PanelSkills() {
             <div className='boxSkill'>
               <div className="detail">
                 <p>
-                  {e.onShow? <i class="fa-solid fa-circle" style={{color: "lightgreen"}}></i>:<i class="fa-solid fa-circle" style={{color: "red"}}></i>}
+                  {e.onShow == 'true'? <i class="fa-solid fa-circle" style={{color: "lightgreen"}}></i>:<i class="fa-solid fa-circle" style={{color: "red"}}></i>}
                   {e.skill}
                 </p>
                 <img src={e.iconUrl} alt="" />

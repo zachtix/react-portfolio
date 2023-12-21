@@ -4,9 +4,9 @@ import axios from 'axios';
 function EditProject(props) {
   const { VITE_API_ENDPOINT } = import.meta.env
   //destructuring 
-  const { id, title, description, tag, stacks, typeContent, liveSite, repo, thumbnailUrl, thumbnailDes, contents, onShow, showHome } = props.item;
+  const { id, title, description, tag, stacks, typeContent, liveSite, repo, thumbnailUrl, thumbnailDes, contents, onTop, onShow, showHome } = props.item;
   const [item, setItem] = useState({
-    id, title, description, tag, stacks, typeContent, liveSite, repo, thumbnailUrl, thumbnailDes, contents, onShow, showHome
+    id, title, description, tag, stacks, typeContent, liveSite, repo, thumbnailUrl, thumbnailDes, contents, onTop, onShow, showHome
   });
   
   const contentsArray = item.contents.split(',');
@@ -154,6 +154,10 @@ function EditProject(props) {
           }
         }}>Add Img</button>
       </div>
+      {/* <div className="inputBox">
+        <label htmlFor="">Show Top</label>
+        <input type="text" value={item.onTop} name="onTop" onChange={handleInputChange} />
+      </div>
       <div className="inputBox">
         <label htmlFor="">Show Project</label>
         <input type="text" value={item.onShow} name="onShow" onChange={handleInputChange} />
@@ -161,6 +165,32 @@ function EditProject(props) {
       <div className="inputBox">
         <label htmlFor="">Show Project on Home</label>
         <input type="text" value={item.showHome} name="showHome" onChange={handleInputChange} />
+      </div> */}
+      
+      <div className="choiceBoxs">
+        <div className="inputBox">
+          <label htmlFor="">Show Top</label>
+          <select name="onTop" onChange={handleInputChange}>
+            <option value="true" name="onTop" selected={item.onTop == 'true'? 'selected':''} >True</option>
+            <option value="false" name="onTop" selected={item.onTop == 'false'? 'selected':''} >False</option>
+          </select>
+        </div>
+        
+        <div className="inputBox">
+          <label htmlFor="">Show Project</label>
+          <select name="onShow" onChange={handleInputChange}>
+            <option value="true" name="onShow" selected={item.onShow == 'true'? 'selected':''} >True</option>
+            <option value="false" name="onShow" selected={item.onShow == 'false'? 'selected':''} >False</option>
+          </select>
+        </div>
+        
+        <div className="inputBox">
+          <label htmlFor="">Show Project on Home</label>
+          <select name="showHome" onChange={handleInputChange}>
+            <option value="true" name="showHome" selected={item.showHome == 'true'? 'selected':''} >True</option>
+            <option value="false" name="showHome" selected={item.showHome == 'false'? 'selected':''} >False</option>
+          </select>
+        </div>
       </div>
       <div className="btn-submit">
         <button onClick={handleSave}>Save</button>

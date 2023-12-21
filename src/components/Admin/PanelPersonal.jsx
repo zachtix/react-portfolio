@@ -1,9 +1,11 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom'
 import '@style/Admin/PanelPersonal.css'
 
 function PanelPersonal() {
   const { VITE_API_ENDPOINT } = import.meta.env
+  const navigate = useNavigate();
   const [ personalData, setPersonalData ] = useState({})
   useEffect(()=>{
     axios({
@@ -17,6 +19,23 @@ function PanelPersonal() {
       setPersonalData(response.data[0])
     })
   }, []);
+  useEffect(()=>{
+    const accessToken = localStorage.getItem('access_token')
+    axios.post(VITE_API_ENDPOINT+'/auth',{}, 
+    {
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer '+accessToken
+      }
+    })
+    .then((response) => {
+      console.log(response.data.status);
+    }).catch(error=>{
+      alert(error.response.data.msg);
+      localStorage.removeItem('access_token')
+      navigate('/admin/login', { replace: true });
+    });
+  }, [])
   const submitEdit = ()=>{
     const accessToken = localStorage.getItem('access_token')
     axios.put(VITE_API_ENDPOINT+'/editpersonaldata',

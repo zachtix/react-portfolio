@@ -5,13 +5,13 @@
   align-items: center;
   gap: 50px;
   .imageBox {
-    background-color: #FFF;
+    // background-color: #FFF;
     width: 300px;
     height: 500px;
-    border-radius: 20px;
+    // border-radius: 20px;
     overflow: hidden;
     position: relative;
-    box-shadow: 10px 15px 20px 10px rgba(0, 0, 0, 0.25);
+    // box-shadow: 10px 15px 20px 10px rgba(0, 0, 0, 0.25);
     & img {
       height: 100%;
       object-fit: cover;
@@ -26,8 +26,8 @@
     gap: 50px;
     border-radius: 20px;
     padding: 110px 120px;
-    background: #ECECEC;
-    box-shadow: 10px 15px 20px 10px rgba(0, 0, 0, 0.25);
+    background: #EFEFEF;
+    // box-shadow: 10px 15px 20px 10px rgba(0, 0, 0, 0.25);
     & h5, h3 {
       display: flex;
       align-items: center;
@@ -35,6 +35,22 @@
         margin-right: 24px;
         font-size: 28px;
       }
+    }
+  }
+}
+
+@media (max-width:800px) {
+  .contact {
+    flex-direction: column;
+    .imageBox {
+      height: 250px;
+      & img {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    .content {
+      padding: 50px 60px;
     }
   }
 }
@@ -54,9 +70,20 @@
     }
     .content {
       width: 100%;
-      padding: 50px 20px;
+      padding: 30px 40px;
       margin-top: 20px;
       gap: 10px;
+      & h1 {
+        font-size: 24px;
+      }
+      & h3, h5 {
+        font-size: 16px;
+      }
+      & h3, h5 {
+        & i {
+          font-size: 20px;
+        }
+      }
     }
   }
 }

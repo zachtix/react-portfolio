@@ -11,6 +11,7 @@
       width: 500px;
       padding: 15px;
       background-color: #EAF0F7;
+      color: #000;
       border: 0;
       border-radius: 8px;
       &.inputID {
@@ -54,6 +55,17 @@
         }
       }
     }
+    & select {
+      width: max-content;
+      margin: 0 auto ;
+      border: 0;
+      background-color: #EAF0F7;
+      padding: 10px;
+      border-radius: 8px;
+      &:focus {
+        outline: none;
+      }
+    }
   }
   & button {
     padding: 12px;
@@ -69,5 +81,11 @@
     margin-top: 15px;
     display: flex;
     gap: 10px;
+  }
+  .choiceBoxs {
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+    // gap: 5px;
   }
 }

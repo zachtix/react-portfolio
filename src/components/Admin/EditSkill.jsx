@@ -62,9 +62,15 @@ function EditSkill(props) {
         <label htmlFor="">Description</label>
         <input type="text" value={item.description} name="description" onChange={handleInputChange} />
       </div>
-      <div className="inputBox">
-        <label htmlFor="">Show Skill</label>
-        <input type="text" value={item.onShow} name="onShow" onChange={handleInputChange} />
+      <div className="choiceBoxs">
+        <div className="inputBox">
+          <label htmlFor="">Show Skill</label>
+          {/* <input type="text" value={item.onShow} name="onShow" onChange={handleInputChange} /> */}
+          <select name="onShow" onChange={handleInputChange}>
+            <option value="true" selected={item.onShow == 'true'? 'selected':''} >True</option>
+            <option value="false" selected={item.onShow == 'false'? 'selected':''} >False</option>
+          </select>
+        </div>
       </div>
       <div className="btn-submit">
         <button onClick={handleSave}>Save</button>
